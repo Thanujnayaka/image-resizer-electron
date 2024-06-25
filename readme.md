@@ -1,38 +1,58 @@
-# Image Resizer
+# Image Resizer Electron App
 
-Electron application that allows you to select an image and easily change the width and/or height.
+This is an Electron application that resizes images. The project now includes end-to-end (E2E) testing using WebdriverIO (WDIO) and unit testing using Mocha and Chai.
 
-<div style="display: flex; justify-content: center">
-<img src="./assets/screen.png" width="400" />
-</div>
+## Getting Started
 
-## Usage
+### Prerequisites
 
-Install dependencies:
+- Node.js and npm installed
+- Git installed
 
-```bash
+### Installation
 
-npm install
-```
+1. **Clone the repository:**
 
-Run:
+   ```sh
+   git clone https://github.com/thanujnayaka777/image-resizer-electron.git
+   cd image-resizer-electron
+   ```
 
-```bash
-npm start
-```
+2. Install the dependencies: npm install.
 
-You can also use `Electronmon` to constantly run and not have to reload after making changes
+3. Running the Application: npm start.
 
-```bash
-npx electronmon .
-```
+4. Run unit tests:npm run test:unit.
 
-## Packaging
+5. End-to-End (E2E) Tests
+   1.Install WDIO dependencies:npm install --save-dev chai @wdio/cli @wdio/local-runner @wdio/mocha-framework @wdio/spec-reporter @wdio/sync wdio-electron-service mocha esm esm-loader
 
-There are multiple ways to package Electron apps. I would suggest [Electron Forge](https://www.electronforge.io/). I did not implement any packaging into this app.
+6. Run E2E tests : npx wdio wdio.conf.js
 
-## Developer Mode
+***Project Structure**
+1. src/: Source files of the application
+2. test/unit/: Unit test files
+3. test/specs/: E2E test files
 
-If your `NODE_ENV` is set to `development` then you will have the dev tools enabled and available in the menu bar. It will also open them by default.
+**Test Coverage**
+Unit Tests
+1. Main Process:
+   Checks if a browser window is created.
+   Ensures the index.html file is loade
+   
+**E2E Tests**
+1. Application Title:
 
-When set to `production`, the dev tools will not be available.
+   Opens the app and verifies the title.
+
+2. Main Page Elements:
+
+   Checks the presence of main UI elements.
+
+3. Image Resizing:
+
+   Performs an image resize operation and verifies the success message.
+
+
+### Result details
+("https://docs.google.com/spreadsheets/d/1ilemxPjJIpILbiD3LlEYaCxiTqxMFfZv/edit?usp=sharing&ouid=114789124499167497159&rtpof=true&sd=true")
